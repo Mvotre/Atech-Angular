@@ -1,0 +1,10 @@
+<div class="repo">
+    <h4> {{repo.name}} </h4>
+    <div class="repo__date">
+        <span> Created at: </span>
+        <p> {{date(repo.created_at)}} </p>
+    </div>
+    <div *ngIf="repo.language">
+        <p class="repo__lang"> {{repo.language}}</p>
+    </div>
+</div>

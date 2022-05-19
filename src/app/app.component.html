@@ -1,0 +1,13 @@
+<div class="App">
+  <app-search (searchValue)="search($event)"></app-search>
+  <div class="main">
+    <div class="main__div">
+      <app-repos [searchValue]="searchValue" [starred]=false></app-repos>
+    </div>
+    <div class="main__div">
+      <app-repos [searchValue]="searchValue" [starred]=true></app-repos>
+    </div>
+  </div>
+</div>
+
+

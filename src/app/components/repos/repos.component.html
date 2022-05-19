@@ -1,0 +1,14 @@
+<div class="box">
+    <h3 class="box__title"> {{ starred ? "Starred Repos" : "Repos"}} </h3>
+    
+    <app-spinner *ngIf="loading"></app-spinner>
+    <div *ngIf="response.length == 0 && searchValue">
+        <p class="error"> Data not found! </p>
+    </div>
+
+    <div *ngIf="response.length > 0">
+        <div *ngFor="let repo of response">
+            <app-repo [repo]="repo"> </app-repo>
+        </div>
+    </div>  
+</div>
